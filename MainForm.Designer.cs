@@ -29,107 +29,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.laptopListBox = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.titleTextBox = new System.Windows.Forms.TextBox();
-            this.screenDiagonalTextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.FullNameTextBox = new System.Windows.Forms.TextBox();
+            this.AddButton = new System.Windows.Forms.Button();
+            this.NeurosurgeonsListBox = new System.Windows.Forms.ListBox();
+            this.RemoveButton = new System.Windows.Forms.Button();
+            this.FullNameLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             //
-            // laptopListBox
+            // FullNameTextBox
             //
-            this.laptopListBox.FormattingEnabled = true;
-            this.laptopListBox.ItemHeight = 16;
-            this.laptopListBox.Location = new System.Drawing.Point(132, 187);
-            this.laptopListBox.Name = "laptopListBox";
-            this.laptopListBox.Size = new System.Drawing.Size(509, 180);
-            this.laptopListBox.TabIndex = 0;
+            this.FullNameTextBox.Location = new System.Drawing.Point(258, 25);
+            this.FullNameTextBox.Name = "FullNameTextBox";
+            this.FullNameTextBox.Size = new System.Drawing.Size(190, 22);
+            this.FullNameTextBox.TabIndex = 7;
+            this.FullNameTextBox.TextChanged += new System.EventHandler(this.FullNameTextBox_TextChanged);
             //
-            // label1
+            // AddButton
             //
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(262, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 17);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Titlle:";
+            this.AddButton.Location = new System.Drawing.Point(284, 64);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(75, 23);
+            this.AddButton.TabIndex = 10;
+            this.AddButton.Text = "Add";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             //
-            // titleTextBox
+            // NeurosurgeonsListBox
             //
-            this.titleTextBox.Location = new System.Drawing.Point(310, 40);
-            this.titleTextBox.Name = "titleTextBox";
-            this.titleTextBox.Size = new System.Drawing.Size(190, 22);
-            this.titleTextBox.TabIndex = 6;
-            this.titleTextBox.TextChanged += new System.EventHandler(this.TitleTextBox_TextChanged);
+            this.NeurosurgeonsListBox.FormattingEnabled = true;
+            this.NeurosurgeonsListBox.ItemHeight = 16;
+            this.NeurosurgeonsListBox.Location = new System.Drawing.Point(71, 103);
+            this.NeurosurgeonsListBox.Name = "NeurosurgeonsListBox";
+            this.NeurosurgeonsListBox.Size = new System.Drawing.Size(509, 180);
+            this.NeurosurgeonsListBox.TabIndex = 11;
             //
-            // screenDiagonalTextBox
+            // RemoveButton
             //
-            this.screenDiagonalTextBox.Location = new System.Drawing.Point(310, 91);
-            this.screenDiagonalTextBox.Name = "screenDiagonalTextBox";
-            this.screenDiagonalTextBox.Size = new System.Drawing.Size(190, 22);
-            this.screenDiagonalTextBox.TabIndex = 8;
-            this.screenDiagonalTextBox.TextChanged += new System.EventHandler(this.screenDiagonalTextBox_TextChanged);
+            this.RemoveButton.Location = new System.Drawing.Point(284, 318);
+            this.RemoveButton.Name = "RemoveButton";
+            this.RemoveButton.Size = new System.Drawing.Size(75, 23);
+            this.RemoveButton.TabIndex = 12;
+            this.RemoveButton.Text = "Remove";
+            this.RemoveButton.UseVisualStyleBackColor = true;
+            this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
             //
-            // label2
+            // FullNameLabel
             //
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(189, 94);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 17);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Screen diagonal:";
-            //
-            // button1
-            //
-            this.button1.Location = new System.Drawing.Point(346, 141);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            //
-            // button2
-            //
-            this.button2.Location = new System.Drawing.Point(333, 391);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 34);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Sort";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.FullNameLabel.AutoSize = true;
+            this.FullNameLabel.Location = new System.Drawing.Point(179, 28);
+            this.FullNameLabel.Name = "FullNameLabel";
+            this.FullNameLabel.Size = new System.Drawing.Size(73, 17);
+            this.FullNameLabel.TabIndex = 13;
+            this.FullNameLabel.Text = "Full name:";
             //
             // Form1
             //
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.screenDiagonalTextBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.titleTextBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.laptopListBox);
+            this.ClientSize = new System.Drawing.Size(653, 391);
+            this.Controls.Add(this.FullNameLabel);
+            this.Controls.Add(this.RemoveButton);
+            this.Controls.Add(this.NeurosurgeonsListBox);
+            this.Controls.Add(this.AddButton);
+            this.Controls.Add(this.FullNameTextBox);
             this.Name = "Form1";
-            this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.TextBox titleTextBox;
+        private System.Windows.Forms.Label FullNameLabel;
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button AddButton;
+        private System.Windows.Forms.ListBox NeurosurgeonsListBox;
 
-        private System.Windows.Forms.TextBox screenDiagonalTextBox;
-        private System.Windows.Forms.Label label2;
-
-        private System.Windows.Forms.Label label1;
-
-        private System.Windows.Forms.ListBox laptopListBox;
+        private System.Windows.Forms.TextBox FullNameTextBox;
+        private System.Windows.Forms.Button RemoveButton;
 
         #endregion
     }

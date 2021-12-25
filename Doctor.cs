@@ -1,7 +1,11 @@
 namespace Task_5
 {
-    public interface Doctor
+    public interface IDoctor
     {
-        
+        string FullName { get; }
+
+        string Diagnose(string[] symptoms);
+
+        void Cure(string diagnose);
     }
 }
